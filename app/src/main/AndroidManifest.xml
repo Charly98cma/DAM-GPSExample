@@ -18,7 +18,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:launchMode="singleTask"> <!-- <= IMPORTANT -->
+            android:launchMode="singleTask"> <!-- <= IMPORTANTE para que no lance multiples veces la misma actividad -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -35,15 +35,14 @@
                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
             </intent-filter>
 
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
             <!-- PATH OF NFC SUPPORTED TYPES -->
             <meta-data android:name="android.nfc.action.TECH_DISCOVERED"
                 android:resource="@xml/nfc_tech_filter" />
 
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
         </activity>
     </application>
-
 </manifest>
